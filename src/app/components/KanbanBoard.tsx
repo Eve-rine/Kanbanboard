@@ -77,7 +77,7 @@ const handleMoveTask = (fromColumnId: string, toColumnId: string, taskId: string
       return;
     }
 
-    handleMoveTask(source.droppableId, destination.droppableId, draggableId, destination.index);
+    handleMoveTask(source.droppableId, destination.droppableId, draggableId);
   };
 
   const handleMenuToggle = (columnId: string) => {
