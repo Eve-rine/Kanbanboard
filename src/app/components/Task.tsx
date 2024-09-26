@@ -10,7 +10,7 @@ interface TaskProps {
 const Task: React.FC<TaskProps> = ({ task }) => {
   return (
     <Paper 
-      elevation={2} 
+      elevation={1} 
       sx={{ 
         p: 2, 
         mb: 2, 

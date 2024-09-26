@@ -116,11 +116,14 @@ const handleMoveTask = (fromColumnId: string, toColumnId: string, taskId: string
             variant="contained"
             sx={{
               backgroundColor: 'white',
-              textTransform: 'none',
-              color: 'blue',
+              color: 'primary.main', 
+              borderColor: 'primary.main',
               '&:hover': {
-                backgroundColor: '#f0f0f0',
+                backgroundColor: 'primary.light', 
+                color: 'white',
               },
+              textTransform: 'none',
+              fontWeight:"bold"
             }}
           >
             Add Column
@@ -133,3 +136,4 @@ const handleMoveTask = (fromColumnId: string, toColumnId: string, taskId: string
 };
 
 export default KanbanBoard;
+

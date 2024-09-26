@@ -59,7 +59,7 @@ const Column: React.FC<ColumnProps> = ({
   return (
     <Card className="menu-container" sx={{ width: 256 }}>
       <CardContent>
-        <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <Box display="flex" justifyContent="space-between" alignItems="center">
           {editingTitle ? (
             <TextField
               value={newTitle}
@@ -98,7 +98,11 @@ const Column: React.FC<ColumnProps> = ({
           </Menu>
         </Box>
 
-        <Divider  sx={{ my: 2 }}  />
+        </CardContent>
+
+        <Divider/>
+
+        <CardContent>
 
         {/* Tasks */}
         <Droppable droppableId={column.id}>
@@ -121,12 +125,13 @@ const Column: React.FC<ColumnProps> = ({
             </div>
           )}
         </Droppable>
+        </CardContent>
 
-        <Divider sx={{ my: 2 }} />
-
-        {/* Add Task Button */}
+        <Divider/>
+        <CardContent>
+        {/* Add Card Button */}
         {showAddTaskForm ? (
-          <Box mt={2}>
+          <Box mt={0}>
             <TextField
               value={newTaskContent}
               onChange={(e) => setNewTaskContent(e.target.value)}
@@ -136,20 +141,29 @@ const Column: React.FC<ColumnProps> = ({
               variant="outlined"
               margin="dense"
             />
-            <Box display="flex" justifyContent="space-between" mt={2}>
-              <Button onClick={() => setShowAddTaskForm(false)} color="primary">
+            <Box display="flex" justifyContent="space-between" mt={0}>
+              <Button onClick={() => setShowAddTaskForm(false)} color="primary"
+                sx={{
+                  textTransform: 'none',
+                }}
+              >
                 Cancel
               </Button>
-              <Button onClick={handleAddTask} variant="contained" color="primary">
+              <Button onClick={handleAddTask} variant="contained" color="primary"
+                  sx={{
+                    textTransform: 'none',
+                  }}
+              >
                 Add
               </Button>
             </Box>
           </Box>
         ) : (
-          <Box textAlign="center" mt={0}>
+          <Box textAlign="center" mt={0} p={0}>
             <Button onClick={() => setShowAddTaskForm(true)}
                    sx={{
-                    textTransform: 'none'
+                    textTransform: 'none',
+                    padding: 0, 
                    }}
              color="primary">
               Add Card
