@@ -140,6 +140,7 @@ const Column: React.FC<ColumnProps> = ({
               size="small"
               variant="outlined"
               margin="dense"
+              label="Title" 
             />
             <Box display="flex" justifyContent="space-between" mt={0}>
               <Button onClick={() => setShowAddTaskForm(false)} color="primary"

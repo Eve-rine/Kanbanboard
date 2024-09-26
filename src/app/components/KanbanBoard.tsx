@@ -119,7 +119,7 @@ const handleMoveTask = (fromColumnId: string, toColumnId: string, taskId: string
               color: 'primary.main', 
               borderColor: 'primary.main',
               '&:hover': {
-                backgroundColor: 'primary.light', 
+                backgroundColor: 'primary.main', 
                 color: 'white',
               },
               textTransform: 'none',
